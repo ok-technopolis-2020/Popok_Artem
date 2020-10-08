@@ -7,6 +7,63 @@
     </head>
 
     <body>
+        <header>
+            <h1>todos</h1>
+        </header>
+        <main>
+            <section role="toolbar">
+                <button aria-label="Mark all tasks as done"></button>
+                <input type="text" placeholder="What needs to be done?" aria-label="Add new task">
+            </section>
+            <section role="listbox" aria-label="List of tasks">
+                <ul>
+                    <li>
+                        <input type="checkbox" name="tasks" id="task1">
+                        <label for="task1">HTML</label>
+                        <button aria-label="Mark as done"></button>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="tasks" id="task2">
+                        <label for="task2">CSS</label>
+                        <button aria-label="Mark as done"></button>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="tasks" id="task3">
+                        <label for="task3">JS</label>
+                        <button aria-label="Mark as done"></button>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="tasks" id="task4">
+                        <label for="task4">JS tools</label>
+                        <button aria-label="Mark as done"></button>
+                    </li>
+                </ul>
+            </section>
+            <section role="toolbar">
+                <ul>
+                    <li role="contentinfo">3 items left</li>
+                    <li>
+                        <ul role="radiogroup" aria-label="Tasks filters">
+                            <li>
+                                <input type="radio" id="all" name="tasks-filters" checked>
+                                <label for="all">All</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="active" name="tasks-filters" type="radio">
+                                <label for="active">Active</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="completed" name="tasks-filters" type="radio">
+                                <label for="completed">Completed</label>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <button>Clear completed</button>
+                    </li>
+                </ul>
+            </section>
+        </main>
     </body>
 
 </html>
