@@ -11,58 +11,74 @@
             <h1>todos</h1>
         </header>
         <main>
-            <section role="toolbar">
-                <button aria-label="Mark all tasks as done"></button>
-                <input type="text" placeholder="What needs to be done?" aria-label="Add new task">
-            </section>
-            <section role="listbox" aria-label="List of tasks">
-                <ul>
+            <menu role="toolbar" aria-label="Adding tasks and bulk-marking as done">
+                <li>
+                    <button aria-label="Mark all tasks as done"></button>
+                </li>
+                <li>
+                    <input type="text" placeholder="What needs to be done?" role="combobox" aria-label="Add new task">
+                </li>
+            </menu>
+            <section role="list" aria-label="List of tasks">
+                <menu role="listitem" aria-label="&quot;HTML&quot; task">
                     <li>
                         <input type="checkbox" name="tasks" id="task1" aria-label="Mark as done">
                         <label for="task1">HTML</label>
+                    </li>
+                    <li>
                         <button aria-label="Delete task"></button>
                     </li>
+                </menu>
+                <menu role="listitem" aria-label="&quot;CSS&quot; task">
                     <li>
                         <input type="checkbox" name="tasks" id="task2" aria-label="Mark as done">
                         <label for="task2">CSS</label>
+                    </li>
+                    <li>
                         <button aria-label="Delete task"></button>
                     </li>
+                </menu>
+                <menu role="listitem" aria-label="&quot;JS&quot; task">
                     <li>
                         <input type="checkbox" name="tasks" id="task3" aria-label="Mark as done">
                         <label for="task3">JS</label>
+                    </li>
+                    <li>
                         <button aria-label="Delete task"></button>
                     </li>
+                </menu>
+                <menu role="listitem" aria-label="&quot;JS tools&quot; task">
                     <li>
                         <input type="checkbox" name="tasks" id="task4" aria-label="Mark as done">
                         <label for="task4">JS tools</label>
+                    </li>
+                    <li>
                         <button aria-label="Delete task"></button>
                     </li>
-                </ul>
+                </menu>
             </section>
-            <section role="toolbar">
-                <ul>
-                    <li role="contentinfo">3 items left</li>
-                    <li>
-                        <ul role="radiogroup" aria-label="Tasks filters">
-                            <li>
-                                <input type="radio" id="all" name="tasks-filters" checked>
-                                <label for="all">All</label>
-                            </li>
-                            <li>
-                                <input type="radio" id="active" name="tasks-filters" type="radio">
-                                <label for="active">Active</label>
-                            </li>
-                            <li>
-                                <input type="radio" id="completed" name="tasks-filters" type="radio">
-                                <label for="completed">Completed</label>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <button>Clear completed</button>
-                    </li>
-                </ul>
-            </section>
+            <menu role="toolbar" aria-label="Filtering and misc">
+                <li role="contentinfo" aria-label="Tasks left to do">3 items left</li>
+                <li aria-label="Tasks filters">
+                    <menu role="radiogroup">
+                        <li>
+                            <input type="radio" id="all" name="tasks-filters" checked>
+                            <label for="all">All</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="active" name="tasks-filters" type="radio">
+                            <label for="active">Active</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="completed" name="tasks-filters" type="radio">
+                            <label for="completed">Completed</label>
+                        </li>
+                    </menu>
+                </li>
+                <li aria-label="Clear completed tasks">
+                    <button>Clear completed</button>
+                </li>
+            </menu>
         </main>
     </body>
 
