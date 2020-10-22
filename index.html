@@ -4,6 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <title>todo</title>
+        <link rel="stylesheet" href="res/css/index.css">
     </head>
 
     <body>
@@ -12,11 +13,11 @@
                 <h1>todos</h1>
             </header>
             <main>
-                <section role="toolbar" aria-label="Adding tasks and bulk-marking as done">
+                <section class="upper-toolbar" role="toolbar" aria-label="Adding tasks and bulk-marking as done">
                     <button aria-label="Mark all tasks as done"></button>
                     <input type="text" placeholder="What needs to be done?" role="combobox" aria-label="Add new task">
                 </section>
-                <ul aria-label="List of tasks">
+                <ul class="tasks-list" aria-label="List of tasks">
                     <li aria-label="HTML task">
                         <input type="checkbox" name="tasks" id="task1" aria-label="Mark as done">
                         <label for="task1">HTML</label>
@@ -39,8 +40,8 @@
                     </li>
                 </ul>
                 <footer role="toolbar" aria-label="Filtering and misc">
-                    <div role="contentinfo" aria-label="Tasks left to do">3 items left</div>
-                    <div aria-label="Tasks filters" role="radiogroup">
+                    <div class="tasks-left-status-bar" role="contentinfo" aria-label="Tasks left to do">3 items left</div>
+                    <div class="filter-tool" aria-label="Tasks filters" role="radiogroup">
                         <input type="radio" id="all" name="tasks-filters" aria-label="Show all tasks" checked>
                         <label for="all">All</label>
 
