@@ -14,44 +14,44 @@
             </header>
             <main>
                 <section class="upper-toolbar" role="toolbar" aria-label="Adding tasks and bulk-marking as done">
-                    <button aria-label="Mark all tasks as done"></button>
-                    <input type="text" placeholder="What needs to be done?" role="combobox" aria-label="Add new task">
+                    <button class="select-all-button" aria-label="Mark all tasks as done"></button>
+                    <input class="new-task-text-input" type="text" placeholder="What needs to be done?" role="combobox" aria-label="Add new task">
                 </section>
                 <ul class="tasks-list" aria-label="List of tasks">
-                    <li aria-label="HTML task">
-                        <input type="checkbox" name="tasks" id="task1" aria-label="Mark as done">
-                        <label for="task1">HTML</label>
-                        <button aria-label="Delete task"></button>
+                    <li class="tasks-list-item" aria-label="HTML task">
+                        <input class="task-done-checkbox" type="checkbox" name="tasks" id="task1" aria-label="Mark as done">
+                        <label class="task-label" for="task1">HTML</label>
+                        <button class="delete-task-button" aria-label="Delete task"></button>
                     </li>
-                    <li aria-label="CSS task">
-                        <input type="checkbox" name="tasks" id="task2" aria-label="Mark as done">
-                        <label for="task2">CSS</label>
-                        <button aria-label="Delete task"></button>
+                    <li class="tasks-list-item" aria-label="CSS task">
+                        <input class="task-done-checkbox" type="checkbox" name="tasks" id="task2" aria-label="Mark as done">
+                        <label class="task-label" for="task2">CSS</label>
+                        <button class="delete-task-button" aria-label="Delete task"></button>
                     </li>
-                    <li aria-label="JS task">
-                        <input type="checkbox" name="tasks" id="task3" aria-label="Mark as done">
-                        <label for="task3">JS</label>
-                        <button aria-label="Delete task"></button>
+                    <li class="tasks-list-item" aria-label="JS task">
+                        <input class="task-done-checkbox" type="checkbox" name="tasks" id="task3" aria-label="Mark as done">
+                        <label class="task-label" for="task3">JS</label>
+                        <button class="delete-task-button" aria-label="Delete task"></button>
                     </li>
-                    <li aria-label="JS tools task">
-                        <input type="checkbox" name="tasks" id="task4" aria-label="Mark as done">
-                        <label for="task4">JS tools</label>
-                        <button aria-label="Delete task"></button>
+                    <li class="tasks-list-item" aria-label="JS tools task">
+                        <input class="task-done-checkbox" type="checkbox" name="tasks" id="task4" aria-label="Mark as done">
+                        <label class="task-label" for="task4">JS tools</label>
+                        <button class="delete-task-button" aria-label="Delete task"></button>
                     </li>
                 </ul>
-                <footer role="toolbar" aria-label="Filtering and misc">
+                <footer class="footer-toolbar" role="toolbar" aria-label="Filtering and misc">
                     <div class="tasks-left-status-bar" role="contentinfo" aria-label="Tasks left to do">3 items left</div>
                     <div class="filter-tool" aria-label="Tasks filters" role="radiogroup">
-                        <input type="radio" id="all" name="tasks-filters" aria-label="Show all tasks" checked>
-                        <label for="all">All</label>
+                        <input class="filter-option-radio" type="radio" id="all" name="tasks-filters" aria-label="Show all tasks" checked>
+                        <label class="filter-option-label" for="all">All</label>
 
-                        <input type="radio" id="active" name="tasks-filters" type="radio" aria-label="Filter active tasks">
-                        <label for="active">Active</label>
+                        <input class="filter-option-radio" type="radio" id="active" name="tasks-filters" type="radio" aria-label="Filter active tasks">
+                        <label class="filter-option-label" for="active">Active</label>
 
-                        <input type="radio" id="completed" name="tasks-filters" type="radio" aria-label="Filter completed tasks">
-                        <label for="completed">Completed</label>
+                        <input class="filter-option-radio" type="radio" id="completed" name="tasks-filters" type="radio" aria-label="Filter completed tasks">
+                        <label class="filter-option-label" for="completed">Completed</label>
                     </div>
-                    <button aria-label="Clear completed tasks">Clear completed</button>
+                    <button class="clear-completed-button" aria-label="Clear completed tasks">Clear completed</button>
                 </footer>
             </main>
         </div>

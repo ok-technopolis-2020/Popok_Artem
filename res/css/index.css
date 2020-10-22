@@ -3,8 +3,8 @@
 
 /* text decoration */
 
-header h1 {
-    font-family: Roboto;
+h1 {
+    font-family: 'Roboto', sans-serif;
     font-size: 100px;
     font-style: normal;
     font-weight: 200;
@@ -14,10 +14,10 @@ header h1 {
     margin: 0;
 }
 
-.upper-toolbar input[type=text]::placeholder,
-.upper-toolbar input[type=text],
-main .tasks-list input+label {
-    font-family: Roboto;
+.new-task-text-input::placeholder,
+.new-task-text-input,
+.task-label {
+    font-family: 'Roboto', sans-serif;
     font-size: 24px;
     font-style: normal;
     font-weight: 300;
@@ -25,32 +25,32 @@ main .tasks-list input+label {
     color: #ccc;
 }
 
-.upper-toolbar input[type=text]::placeholder {
+.new-task-text-input::placeholder {
     opacity: 1;
     font-style: italic;
 }
 
-main .tasks-list input+label,
-.upper-toolbar input[type=text] {
+.task-label,
+.new-task-text-input {
     color: #666;
 }
 
-main .tasks-list input[type=checkbox]:checked+label {
+.task-done-checkbox:checked+label {
     color: #ccc;
     text-decoration-line: line-through;
 }
 
-footer input+label,
-footer input,
-footer button,
-footer .tasks-left-status-bar {
-    font-family: Roboto;
+.filter-option-label,
+.clear-completed-button,
+.tasks-left-status-bar {
+    font-family: 'Roboto', sans-serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 300;
     letter-spacing: -0.35px;
     color: #888;
 }
+
 
 /* app container */
 
@@ -63,6 +63,7 @@ main {
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+
 /* upper toolbar */
 
 .upper-toolbar {
@@ -73,7 +74,7 @@ main {
     border-bottom: 1px solid #EBDFDF;
 }
 
-.upper-toolbar input[type=text] {
+.new-task-text-input {
     width: 100%;
     height: 100%;
     padding: 0;
@@ -92,14 +93,15 @@ main {
     background-size: 28px 16px;
 }
 
+
 /* tasks list */
 
-main .tasks-list {
+.tasks-list {
     margin: 0;
     padding: 0;
 }
 
-main .tasks-list li {
+.tasks-list-item {
     height: 64px;
     display: flex;
     flex-wrap: nowrap;
@@ -107,14 +109,14 @@ main .tasks-list li {
     border-bottom: 1px solid #EBDFDF;
 }
 
-main .tasks-list input[type=checkbox]+label {
+.task-label {
     display: flex;
     align-items: center;
     width: 100%;
     height: 100%;
 }
 
-main .tasks-list button {
+.delete-task-button {
     width: 42px;
     height: 100%;
     border: none;
@@ -125,14 +127,15 @@ main .tasks-list button {
     background-size: 20px 20px;
 }
 
+
 /* custom checkboxes */
 
-main .tasks-list input[type=checkbox] {
+.task-done-checkbox {
     position: absolute;
     opacity: 0;
 }
 
-main .tasks-list input[type=checkbox]+label::before {
+.task-done-checkbox+label::before {
     content: '';
     display: inline-block;
     width: 40px;
@@ -145,13 +148,13 @@ main .tasks-list input[type=checkbox]+label::before {
     vertical-align: middle;
 }
 
-main .tasks-list input[type=checkbox]:checked+label::before {
-    /*background-color: #5DC2AF;*/
+.task-done-checkbox:checked+label::before {
     background-image: url(../images/completed.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 20px 20px;
 }
+
 
 /* footer toolbar */
 
@@ -162,12 +165,12 @@ footer {
     align-items: center;
 }
 
-footer .tasks-left-status-bar {
+.tasks-left-status-bar {
     width: 116px;
     margin-left: 12px;
 }
 
-footer button {
+.clear-completed-button {
     width: 107px;
     border: none;
     white-space: nowrap;
@@ -177,7 +180,7 @@ footer button {
     margin-right: 12px;
 }
 
-footer .filter-tool {
+.filter-tool {
     height: 100%;
     width: 100%;
     display: flex;
@@ -186,14 +189,15 @@ footer .filter-tool {
     justify-content: center;
 }
 
+
 /* custom radio buttons */
 
-footer .filter-tool input[type=radio] {
+.filter-option-radio {
     position: absolute;
     opacity: 0;
 }
 
-footer .filter-tool input[type=radio]+label {
+.filter-option-radio+label {
     display: flex;
     align-items: center;
     margin-left: 4px;
@@ -205,6 +209,6 @@ footer .filter-tool input[type=radio]+label {
     padding-right: 4px;
 }
 
-footer .filter-tool input[type=radio]:checked+label {
+.filter-option-radio:checked+label {
     border-color: #EBDFDF;
 }
