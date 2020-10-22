@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 /* text decoration */
@@ -6,9 +5,6 @@
 h1 {
     font-family: 'Roboto', sans-serif;
     font-size: 100px;
-    font-style: normal;
-    font-weight: 200;
-    letter-spacing: -2.5px;
     color: #ccc;
     text-align: center;
     margin: 0;
@@ -19,9 +15,6 @@ h1 {
 .task-label {
     font-family: 'Roboto', sans-serif;
     font-size: 24px;
-    font-style: normal;
-    font-weight: 300;
-    letter-spacing: -0.6px;
     color: #ccc;
 }
 
@@ -45,9 +38,6 @@ h1 {
 .tasks-left-status-bar {
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
-    font-style: normal;
-    font-weight: 300;
-    letter-spacing: -0.35px;
     color: #888;
 }
 
@@ -68,7 +58,6 @@ main {
 .todo-app::after {
     content: '';
     background-color: white;
-    display: inline-block;
     position: absolute;
     height: 10px;
     width: 558px;
@@ -81,7 +70,6 @@ main {
 .todo-app::before {
     content: '';
     background-color: white;
-    display: inline-block;
     position: absolute;
     height: 10px;
     width: 554px;
