@@ -143,6 +143,10 @@ main {
     border-bottom: 1px solid #EBDFDF;
 }
 
+.tasks-list-item:hover {
+    background-color: #FAFAFA;
+}
+
 .task-label {
     display: flex;
     align-items: center;
@@ -159,6 +163,11 @@ main {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 20px 20px;
+    opacity: 0;
+}
+
+.tasks-list-item:hover .delete-task-button {
+    opacity: 1;
 }
 
 @media (-webkit-min-device-pixel-ratio: 2) {
@@ -188,11 +197,16 @@ main {
     vertical-align: middle;
 }
 
+.tasks-list-item:hover .task-done-checkbox:not(:checked)+label::before {
+    border-color: #ccc;
+}
+
 .task-done-checkbox:checked+label::before {
     background-image: url(../images/completed.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 20px 20px;
+    border-color: #5DC2AF;
 }
 
 @media (-webkit-min-device-pixel-ratio: 2) {
