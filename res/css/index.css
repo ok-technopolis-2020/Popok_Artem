@@ -55,12 +55,40 @@ h1 {
 /* app container */
 
 .todo-app {
+    background-color: white;
     width: 562px;
     margin: 0 auto;
+    position: relative;
 }
 
 main {
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.todo-app::after {
+    content: '';
+    background-color: white;
+    display: inline-block;
+    position: absolute;
+    height: 10px;
+    width: 558px;
+    bottom: -5px;
+    left: 2px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: -1;
+}
+
+.todo-app::before {
+    content: '';
+    background-color: white;
+    display: inline-block;
+    position: absolute;
+    height: 10px;
+    width: 554px;
+    bottom: -10px;
+    left: 4px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: -2;
 }
 
 
@@ -91,6 +119,12 @@ main {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 28px 16px;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2) {
+    .upper-toolbar button {
+        background-image: url(../images/select-all@2x.png);
+    }
 }
 
 
@@ -127,6 +161,12 @@ main {
     background-size: 20px 20px;
 }
 
+@media (-webkit-min-device-pixel-ratio: 2) {
+    .delete-task-button {
+        background-image: url(../images/close@2x.png);
+    }
+}
+
 
 /* custom checkboxes */
 
@@ -153,6 +193,12 @@ main {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 20px 20px;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2) {
+    .task-done-checkbox:checked+label::beforen {
+        background-image: url(../images/completed@2x.png);
+    }
 }
 
 
