@@ -1,0 +1,62 @@
+/* filter toolbar */
+
+.footer-toolbar {
+    min-height: 43px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tasks-left-status-bar {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: var(--footer-toolbar_text-color);
+    margin-left: 12px;
+}
+
+.clear-completed-button {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: var(--footer-toolbar_text-color);
+    border: none;
+    white-space: nowrap;
+    margin: 0;
+    padding: 4px;
+    background-color: transparent;
+    margin-right: 12px;
+    text-align: right;
+}
+
+
+/* filter tool */
+
+.filter-tool {
+    display: flex;
+    align-items: center;
+}
+
+.filter-tool__option-radio {
+    position: absolute;
+    opacity: 0;
+}
+
+.filter-tool__option-radio-label {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: var(--footer-toolbar_text-color);
+    margin-left: 4px;
+    margin-right: 4px;
+    padding: 1px 4px 1px 4px;
+    border: 1px transparent solid;
+    border-radius: 4px;
+}
+
+.filter-tool__option-radio:checked+.filter-tool__option-radio-label {
+    border-color: var(--filter-tool__option-radio_checked-border-color);
+}
+
+.filter-tool__option-radio:checked:focus+.filter-tool__option-radio-label {
+    outline: 2px solid var(--filter-tool__option-radio_focus-border-color);
+    border-color: transparent;
+}
