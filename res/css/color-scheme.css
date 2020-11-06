@@ -1,0 +1,24 @@
+.todo-app {
+    /* todo app */
+    --todo-app_logo-color: #ccc;
+    --todo-app_background-color: white;
+    --todo-app_shadow-color: rgba(0, 0, 0, 0.2);
+    /* upper toolbar */
+    --upper-toolbar_border-bottom-color: #ebdfdf;
+    --upper-toolbar__new-task-input_text-color: #666;
+    --upper-toolbar__new-task-input_placeholder-color: #ccc;
+    /* tasks list item */
+    --tasks-list-item_border-bottom-color: #ebdfdf;
+    --tasks-list-item_hover-color: #fafafa;
+    --tasks-list-item__name-span_color: #666;
+    --tasks-list-item__name-span_completed-color: #ccc;
+    --tasks-list-item__done-checkbox-label_border-color: #e6e6e6;
+    --tasks-list-item__done-checkbox-label_hover-border-color: #ccc;
+    --tasks-list-item__done-checkbox-label_focus-border-color: #ccc;
+    --tasks-list-item__done-checkbox-label_checked-border-color: #5dc2af;
+    --tasks-list-item__done-checkbox-label_background-color: white;
+    /* footer toolbar */
+    --footer-toolbar_text-color: #888;
+    --filter-tool__option-radio_checked-border-color: #ebdfdf;
+    --filter-tool__option-radio_focus-border-color: #ccc;
+}
