@@ -3,89 +3,89 @@
     padding: 4px 0 4px 0;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid var(--tasks-list-item_border-bottom-color);
-}
+    border-bottom: 1px solid var(--border-bottom-color);
 
-.tasks-list-item:hover {
-    background-color: var(--tasks-list-item_hover-color);
-}
-
-.tasks-list-item__name-span {
-    font-family: 'Roboto', sans-serif;
-    font-size: 24px;
-    color: var(--tasks-list-item__name-span_color);
-    flex-grow: 1;
-    min-width: 0;
-    word-wrap: break-word;
-}
-
-/* custom checkboxes */
-
-.tasks-list-item__done-checkbox {
-    position: absolute;
-    opacity: 0;
-}
-
-.tasks-list-item__done-checkbox-label {
-    width: 40px;
-    height: 40px;
-    flex-shrink: 0;
-    margin-left: 11px;
-    margin-right: 11px;
-    box-sizing: border-box;
-    border-radius: 50%;
-    border: 1px solid var(--tasks-list-item__done-checkbox-label_border-color);
-    background-color: var(--tasks-list-item__done-checkbox-label_background-color);
-}
-
-.tasks-list-item__done-checkbox:checked ~ .tasks-list-item__name-span {
-    color: var(--tasks-list-item__name-span_completed-color);
-    text-decoration-line: line-through;
-}
-
-.tasks-list-item__done-checkbox:focus ~ .tasks-list-item__done-checkbox-label {
-    border: 3px solid var(--tasks-list-item__done-checkbox-label_focus-border-color);
-}
-
-.tasks-list-item:hover .tasks-list-item__done-checkbox:not(:checked) ~ .tasks-list-item__done-checkbox-label {
-    border-color: var(--tasks-list-item__done-checkbox-label_hover-border-color)
-}
-
-.tasks-list-item__done-checkbox:checked ~ .tasks-list-item__done-checkbox-label {
-    background-image: url(../images/completed.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 20px 20px;
-    border-color: var(--tasks-list-item__done-checkbox-label_checked-border-color);
-}
-
-@media (-webkit-min-device-pixel-ratio: 2) {
-    .tasks-list-item__done-checkbox:checked ~ .tasks-list-item__done-checkbox-label {
-        background-image: url(../images/completed@2x.png);
+    &:hover {
+        background-color: var(--hover-color);
     }
-}
-
-/* delete task button */
-
-.tasks-list-item__delete-button {
-    min-width: 42px;
-    height: 42px;
-    border: none;
-    background-color: transparent;
-    background-image: url(../images/close.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 20px 20px;
-    opacity: 0;
-}
-
-.tasks-list-item:hover .tasks-list-item__delete-button,
-.tasks-list-item__delete-button:focus {
-    opacity: 1;
-}
-
-@media (-webkit-min-device-pixel-ratio: 2) {
-    .tasks-list-item__delete-button {
-        background-image: url(../images/close@2x.png);
+    
+    &__name-span {
+        font-family: 'Roboto', sans-serif;
+        font-size: 24px;
+        color: var(--name-span_color);
+        flex-grow: 1;
+        min-width: 0;
+        word-wrap: break-word;
+    }
+    
+    /* custom checkboxes */
+    
+    &__done-checkbox {
+        position: absolute;
+        opacity: 0;
+    }
+    
+    &__done-checkbox-label {
+        width: 40px;
+        height: 40px;
+        flex-shrink: 0;
+        margin-left: 11px;
+        margin-right: 11px;
+        box-sizing: border-box;
+        border-radius: 50%;
+        border: 1px solid var(--done-checkbox-label_border-color);
+        background-color: var(--done-checkbox-label_background-color);
+    }
+    
+    &__done-checkbox:checked ~ &__name-span {
+        color: var(--name-span_completed-color);
+        text-decoration-line: line-through;
+    }
+    
+    &__done-checkbox:focus ~ &__done-checkbox-label {
+        border: 3px solid var(--done-checkbox-label_focus-border-color);
+    }
+    
+    &:hover &__done-checkbox:not(:checked) ~ &__done-checkbox-label {
+        border-color: var(--done-checkbox-label_hover-border-color)
+    }
+    
+    &__done-checkbox:checked ~ &__done-checkbox-label {
+        background-image: url(../images/completed.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 20px 20px;
+        border-color: var(--done-checkbox-label_checked-border-color);
+    }
+    
+    @media (-webkit-min-device-pixel-ratio: 2) {
+        &__done-checkbox:checked ~ &__done-checkbox-label {
+            background-image: url(../images/completed@2x.png);
+        }
+    }
+    
+    /* delete task button */
+    
+    &__delete-button {
+        min-width: 42px;
+        height: 42px;
+        border: none;
+        background-color: transparent;
+        background-image: url(../images/close.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 20px 20px;
+        opacity: 0;
+    }
+    
+    &:hover &__delete-button,
+    &__delete-button:focus {
+        opacity: 1;
+    }
+    
+    @media (-webkit-min-device-pixel-ratio: 2) {
+        &__delete-button {
+            background-image: url(../images/close@2x.png);
+        }
     }
 }
